@@ -15,19 +15,5 @@ public class PhasingEater implements ModInitializer {
 	public static final Logger LOGGER = LoggerFactory.getLogger("phasingeater");
 
 	@Override
-	public void onInitialize() {
-		UseItemCallback.EVENT.register((player, world, hand) -> {
-			ItemStack itemStack = player.getStackInHand(hand);
-
-			if (!(player instanceof ServerPlayerEntity)) return TypedActionResult.pass(itemStack);
-
-			if (itemStack.getItem().isFood() && player.getItemUseTimeLeft() == 0) {
-				ServerPlayerEntity serverPlayer = (ServerPlayerEntity) player;
-				GameMode spectatorMode = GameMode.SPECTATOR;
-				serverPlayer.changeGameMode(spectatorMode);
-			}
-			
-			return TypedActionResult.pass(itemStack);
-		});
-	}
+	public void onInitialize() {}
 }

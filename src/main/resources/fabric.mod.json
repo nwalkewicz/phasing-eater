@@ -3,17 +3,13 @@
 	"id": "phasingeater",
 	"version": "${version}",
 	"name": "Phasing Eater",
-	"description": "This is an example description! Tell everyone what your mod is about!",
-	"authors": [
-		"Nicholas Walkewicz"
-	],
+	"description": "A remake of the functionality used in CaptainSparklez's video: https://youtu.be/s0oWOgGtZWc",
+	"authors": [ "Nicholas Walkewicz" ],
 	"license": "MIT",
 	"icon": "assets/phasingeater/icon.png",
 	"environment": "*",
 	"entrypoints": {
-		"main": [ "dev.nwalk.phasingeater.PhasingEater" ],
-		"client": [ "dev.nwalk.phasingeater.PhasingEaterClient" ],
-		"fabric-datagen": [ "dev.nwalk.phasingeater.PhasingEaterDataGenerator" ]
+		"main": [ "dev.nwalk.phasingeater.PhasingEater" ]
 	},
 	"mixins": [ "phasingeater.mixins.json" ],
 	"depends": {
@@ -22,5 +18,5 @@
 		"java": ">=17",
 		"fabric-api": "*"
 	},
-	"suggests": { "another-mod": "*" }
+	"suggests": {}
 }
