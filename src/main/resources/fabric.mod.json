@@ -9,7 +9,8 @@
 	"icon": "assets/phasingeater/icon.png",
 	"environment": "*",
 	"entrypoints": {
-		"main": [ "dev.nwalk.phasingeater.PhasingEater" ]
+		"main": [ "dev.nwalk.phasingeater.PhasingEater" ],
+		"client": [ "dev.nwalk.phasingeater.PhasingEaterClient" ]
 	},
 	"mixins": [ "phasingeater.mixins.json" ],
 	"depends": {

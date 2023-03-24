@@ -1,0 +1,7 @@
+{
+  "text.phasingeater.correcttool": "Tool: %d",
+  "text.phasingeater.toolrequired": "(Required)",
+  "text.phasingeater.breakprogress": "Progress: %d%%",
+
+  "item.phasingeater.lightning_wand": "Lightning Wand"
+}

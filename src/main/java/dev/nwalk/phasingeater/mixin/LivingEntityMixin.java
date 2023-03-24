@@ -17,20 +17,19 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 @Mixin(LivingEntity.class)
-public abstract class CustomLivingEntity extends Entity {
-    public CustomLivingEntity(EntityType<?> type, World world) {
+public abstract class LivingEntityMixin extends Entity {
+    public LivingEntityMixin(EntityType<?> type, World world) {
         super(type, world);
     }
 
     @Inject(method = "consumeItem", at = @At("HEAD"))
-    private void injected(CallbackInfo info) {
+    private void onConsumeItem(CallbackInfo info) {
         LivingEntity player = ((LivingEntity)(Object)this);
 
         // Set player's GameMode to spectator
         if (player instanceof ServerPlayerEntity) ((ServerPlayerEntity) player).changeGameMode(GameMode.SPECTATOR);
 
         // Start 10-second timer
-        final String overlayMessagePrefix = "Spectator ends in ";
         int delay = 1000;
         int period = 1000;
         Timer timer = new Timer();
