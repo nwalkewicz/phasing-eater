@@ -1,10 +1,9 @@
 package dev.nwalk.phasingeater;
 
-
 public interface BreakProgressTracker {
-    public float getBreakProgress(float tickDelta);
+  public float getBreakProgress(float tickDelta);
 
-    public default float getBreakProgressPercent(float tickDelta) {
-        return this.getBreakProgress(tickDelta) * 100;
-    }
+  public default float getBreakProgressPercent(float tickDelta) {
+    return this.getBreakProgress(tickDelta) * 100;
+  }
 }
